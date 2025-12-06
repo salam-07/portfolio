@@ -1,6 +1,6 @@
 import { dockApps } from '#constants';
 import { useGSAP } from '@gsap/react';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Tooltip } from "react-tooltip";
 import gsap from 'gsap';
 
@@ -53,7 +53,7 @@ const Dock = () => {
 
     }, []);
     const toggleApp = (app) => {
-
+        // TODO
     };
 
     return (
