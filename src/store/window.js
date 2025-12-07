@@ -13,16 +13,17 @@ const useWindowStore = create(immer((set) => ({
         }
         const win = state.windows[windowKey];
         win.isOpen = true;
-        closeWindow: (windowKey) => set((state) => {
-            if (!state.windows[windowKey]) {
-                console.error(`Window "${windowKey}" not found`);
-                return;
-            }
-            const win = state.windows[windowKey];
-            win.isOpen = false;
-            win.zIndex = INITIAL_Z_INDEX;
-            win.data = null;
-        }), win.zIndex = INITIAL_Z_INDEX;
+        win.zIndex = INITIAL_Z_INDEX;
+        win.data = null;
+    }),
+    closeWindow: (windowKey) => set((state) => {
+        if (!state.windows[windowKey]) {
+            console.error(`Window "${windowKey}" not found`);
+            return;
+        }
+        const win = state.windows[windowKey];
+        win.isOpen = false;
+        win.zIndex = INITIAL_Z_INDEX;
         win.data = null;
     }),
     focusWindow: (windowKey, data = null) => set((state) => {
