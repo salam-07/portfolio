@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useLayoutEffect, useRef } from "react";
 import { Draggable } from "gsap/Draggable";
-import { FocusIcon } from "lucide-react";
 
 const WindowWrapper = (Component, windowKey) => {
     const Wrapped = (props) => {
